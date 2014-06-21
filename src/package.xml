@@ -29,4 +29,23 @@
 		<languages languagecode="en">languages/en.xml</languages>
 		<languages languagecode="de">languages/de.xml</languages>
 	</instructions>
+
+	<instructions type="update" fromversion="1.0.3 pl 1">
+		<files>tar/files.tar</files>
+		<bbcodes>xml/bbcodes.xml</bbcodes>
+		<eventlistener>xml/eventlistener.xml</eventlistener>
+		<languages languagecode="de-informal">languages/de-informal.xml</languages>
+		<languages languagecode="en">languages/en.xml</languages>
+		<languages languagecode="de">languages/de.xml</languages>
+	</instructions>
+
+	<instructions type="update" fromversion="1.0.3">
+		<files>tar/files.tar</files>
+		<bbcodes>xml/bbcodes.xml</bbcodes>
+		<eventlistener>xml/eventlistener.xml</eventlistener>
+		<languages languagecode="de-informal">languages/de-informal.xml</languages>
+		<languages languagecode="en">languages/en.xml</languages>
+		<languages languagecode="de">languages/de.xml</languages>
+	</instructions>
+
 </package>
