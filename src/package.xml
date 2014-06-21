@@ -6,9 +6,9 @@
 		<plugin><![CDATA[com.woltlab.wcf.data.message.bbcode]]></plugin>
 		<isunique>1</isunique>
 		<version><![CDATA[1.0.4]]></version>
-        <packagedescription><![CDATA[BBCode to show item- and spelldata from Wowhead.com.]]></packagedescription>
-        <packagedescription language="de"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
-        <packagedescription language="de-informal"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
+		<packagedescription><![CDATA[BBCode to show item- and spelldata from Wowhead.com.]]></packagedescription>
+		<packagedescription language="de"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
+		<packagedescription language="de-informal"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
 		<date><![CDATA[2013-03-23]]></date>
 	</packageinformation>
 

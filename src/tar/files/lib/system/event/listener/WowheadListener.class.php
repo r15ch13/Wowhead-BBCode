@@ -3,7 +3,6 @@ require_once(WCF_DIR.'lib/system/event/EventListener.class.php');
 
 class WowheadListener implements EventListener
 {
-
     /**
      * @see EventListener::execute()
      */
