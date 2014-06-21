@@ -19,18 +19,18 @@ class WowheadBBCode implements BBCode
 		if(!empty($content))
 		{
 			// Url ueberpruefen und benoetigte Daten extrahieren
-			if(preg_match('/^https?:\/\/(.+?)?\.?(?:wowhead|thottbot)\.com(?:\:\d+)?\/\??(item|quest|spell|achievement|transmog-set|statistic|npc|object|petability)=([0-9]+)$/', StringUtil::encodeHtml($content), $data))
+			if(preg_match('/^https?:\/\/(.+?)?\.?(?:wowhead|thottbot|hearthhead)\.com(?:\:\d+)?\/\??(item|quest|spell|achievement|transmog-set|statistic|npc|object|petability|hearthstone\/card|card|hsachievement|cardback|deck|mechanic)=([0-9]+)$/', StringUtil::encodeHtml($content), $matches))
 			{
 				// nur wenn es vier oder mehr Ergebnisse gibt
-				if(count($data) >= 4)
+				if(count($matches) >= 4)
 				{
 					// Daten zur besseren Lesbarkeit in Variablen speichern
-					$url = $data[0];
-					$lang = $data[1];
-					$type = $data[2];
-					$item = $data[3];
+					$url = $matches[0];
+					$lang = $matches[1];
+					$type = $matches[2];
+					$id = $matches[3];
 
-					$name = $type ." #". $item;
+					$name = $type ." #". $id;
 					$rel = '';
 
 					// Pruefen ob es einen BBCode Parameter gibt
