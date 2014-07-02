@@ -19,6 +19,7 @@ The tooltip adapts to the language of the copied links:
 Example:
 
     [wow]http://www.wowhead.com/item=28288[/wow]
+    [wow]http://wod.wowhead.com/spell=49998[/wow]
     [wow=gems=23121&ench=2647&pcs=25695:25696:25697]http://www.wowhead.com/item=25697[/wow]
     [wow=upgd=4]http://www.wowhead.com/item=105547[/wow]
     [wow=upgd=4]http://de.wowhead.com/item=105547[/wow]
