@@ -19,8 +19,11 @@ The tooltip adapts to the language of the copied links:
 Example:
 
     [wow]http://www.wowhead.com/item=28288[/wow]
-    [wow=lvl=76]http://de.wowhead.com/item=28288[/wow]
     [wow=gems=23121&ench=2647&pcs=25695:25696:25697]http://www.wowhead.com/item=25697[/wow]
+    [wow=upgd=4]http://www.wowhead.com/item=105547[/wow]
+    [wow=upgd=4]http://de.wowhead.com/item=105547[/wow]
+    [wow]http://thottbot.com/item=25697[/wow]
+    [wow]http://www.hearthhead.com/card=546/shield-slam[/wow]
 
 It seams there is a bug in Wowheads power.js. If you add an item with gems/enchantments or whatsoever the script breaks and only items before the broken item will be displayed correctly. Avoid using gems/enchantments etc. until Wowhead fixes this problem.
 
