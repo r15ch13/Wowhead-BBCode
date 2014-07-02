@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <import>
+        <templatelistener name="wowhead-bbcode">
+            <environment>user</environment>
+            <templatename>headIncludeJavaScript</templatename>
+            <eventname>javascriptInclude</eventname>
+            <templatecode><![CDATA[
+<script type="text/javascript" src="https://static.wowhead.com/widgets/power.js"></script>
+<script>
+var wowhead_tooltips = {
+    "colorlinks": true,
+    "iconizelinks": true,
+    "renamelinks": true,
+    "hide": {
+        "maxstack": false,
+        "droppedby": false,
+        "dropchance": false,
+        "reagents": false,
+        "ilvl": false,
+        "extra": false,
+        "sellprice": false
+    }
+}
+</script>
+]]></templatecode>
+        </templatelistener>
+    </import>
+</data>

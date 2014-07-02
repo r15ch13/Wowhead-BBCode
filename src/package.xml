@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package name="de.r15ch13.wcf.data.message.bbcode.wowhead" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/package.xsd">
-	<packageinformation>
-		<packagename><![CDATA[Wowhead BBCode]]></packagename>
-		<standalone>0</standalone>
-		<plugin><![CDATA[com.woltlab.wcf.data.message.bbcode]]></plugin>
-		<isunique>1</isunique>
-		<version><![CDATA[1.0.4]]></version>
-		<packagedescription><![CDATA[BBCode to show item- and spelldata from Wowhead.com.]]></packagedescription>
-		<packagedescription language="de"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
-		<packagedescription language="de-informal"><![CDATA[Ein BBCode um Item- und Spelldaten von Wowhead.com anzeigen zulassen.]]></packagedescription>
-		<date><![CDATA[2013-03-23]]></date>
-	</packageinformation>
+    <package name="de.r15ch13.wcf.bbcode.wowhead" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
 
-	<authorinformation>
-		<author><![CDATA[r15ch13]]></author>
-		<authorurl><![CDATA[https://github.com/r15ch13/Wowhead-BBCode]]></authorurl>
-	</authorinformation>
+    <packageinformation>
+        <packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
+        <packagedescription><![CDATA[BBCode for Wowhead.com, Thottbot.com and Hearthhead.com tooltips]]></packagedescription>
+        <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com, Thottbot.com und Hearthhead.com]]></packagedescription>
+        <version>2.0.0</version>
+        <date>2014-07-02</date>
+    </packageinformation>
 
-	<requiredpackages>
-		<requiredpackage minversion="1.0.0">com.woltlab.wcf.data.message.bbcode</requiredpackage>
-	</requiredpackages>
+    <authorinformation>
+        <author><![CDATA[r15ch13]]></author>
+        <authorurl><![CDATA[https://github.com/r15ch13/Wowhead-BBCode]]></authorurl>
+    </authorinformation>
 
-	<instructions type="install">
-		<files>tar/files.tar</files>
-		<bbcodes>xml/bbcodes.xml</bbcodes>
-		<eventlistener>xml/eventlistener.xml</eventlistener>
-		<languages languagecode="de-informal">languages/de-informal.xml</languages>
-		<languages languagecode="en">languages/en.xml</languages>
-		<languages languagecode="de">languages/de.xml</languages>
-	</instructions>
+    <excludedpackages>
+        <excludedpackage version="*">de.ihl-gilneas.wcf.wildstar.bbcode</excludedpackage>
+    </excludedpackages>
 
-	<instructions type="update" fromversion="1.0.3 pl 1">
-		<files>tar/files.tar</files>
-		<bbcodes>xml/bbcodes.xml</bbcodes>
-		<eventlistener>xml/eventlistener.xml</eventlistener>
-		<languages languagecode="de-informal">languages/de-informal.xml</languages>
-		<languages languagecode="en">languages/en.xml</languages>
-		<languages languagecode="de">languages/de.xml</languages>
-	</instructions>
+    <requiredpackages>
+        <requiredpackage minversion="2.0.0">com.woltlab.wcf</requiredpackage>
+    </requiredpackages>
 
-	<instructions type="update" fromversion="1.0.3">
-		<files>tar/files.tar</files>
-		<bbcodes>xml/bbcodes.xml</bbcodes>
-		<eventlistener>xml/eventlistener.xml</eventlistener>
-		<languages languagecode="de-informal">languages/de-informal.xml</languages>
-		<languages languagecode="en">languages/en.xml</languages>
-		<languages languagecode="de">languages/de.xml</languages>
-	</instructions>
+    <instructions type="install">
+        <instruction type="file">tar/files.tar</instruction>
+        <instruction type="template">tar/templates.tar</instruction>
 
+        <instruction type="bbcode">xml/bbcode.xml</instruction>
+        <instruction type="language">languages/*.xml</instruction>
+        <instruction type="templateListener">xml/templateListener.xml</instruction>
+    </instructions>
 </package>
