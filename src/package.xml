@@ -5,8 +5,8 @@
         <packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
         <packagedescription><![CDATA[BBCode for Wowhead.com, Thottbot.com and Hearthhead.com tooltips]]></packagedescription>
         <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com, Thottbot.com und Hearthhead.com]]></packagedescription>
-        <version>2.0.2</version>
-        <date>2014-07-02</date>
+        <version>2.0.3</version>
+        <date>2014-07-30</date>
     </packageinformation>
 
     <authorinformation>
@@ -31,7 +31,8 @@
         <instruction type="templateListener">xml/templateListener.xml</instruction>
     </instructions>
 
-    <instructions type="update" fromversion="2.0.0">
+    <instructions type="update" fromversion="2.0.*">
         <instruction type="file">tar/files.tar</instruction>
+        <instruction type="bbcode">xml/bbcode.xml</instruction>
     </instructions>
 </package>
