@@ -26,7 +26,7 @@ class WowheadBBCode extends AbstractBBCode
             'id' => 0,
         );
 
-        if(preg_match('/^https?:\/\/(.+?)?\.?(?:wowhead|thottbot|hearthhead)\.com(?:\:\d+)?\/\??(item|quest|spell|achievement|transmog-set|statistic|npc|object|petability|hearthstone\/card|card|hsachievement|cardback|deck|mechanic)=([0-9]+)(?:.*)$/', $content, $matches))
+        if(preg_match('/^https?:\/\/(.+?)?\.?(?:wowhead|thottbot|hearthhead)\.com(?:\:\d+)?\/\??(achievement|adventure|boss|building|card|cardback|champion|currency|deck|event|follower|garrisonability|guide|hearthstone\/card|hsachievement|item|itemset|mechanic|mission|npc|object|outfit|petability|quest|resource|ship|spell|statistic|threat|transmog-set|zone)=([0-9]+)(?:.*)$/', $content, $matches))
         {
             if(count($matches) >= 4)
             {
