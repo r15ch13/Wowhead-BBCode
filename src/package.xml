@@ -34,5 +34,6 @@
     <instructions type="update" fromversion="2.0.*">
         <instruction type="file">tar/files.tar</instruction>
         <instruction type="bbcode">xml/bbcode.xml</instruction>
+        <instruction type="templateListener">xml/templateListener.xml</instruction>
     </instructions>
 </package>
