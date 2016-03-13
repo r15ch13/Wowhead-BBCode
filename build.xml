@@ -27,7 +27,7 @@
         <echo msg="------------------" />
         <echo msg="Package structure:" />
         <echo msg="Projectfolder" />
-        <echo msg="|-- build                   # The build package will be saved here ([packagename]_v[version].tar[.gz])" />
+        <echo msg="|-- dist                    # The build package will be saved here ([packagename]_v[version].tar[.gz])" />
         <echo msg="|-- src" />
         <echo msg="|   |-- languages           # Language-Files (*.xml)" />
         <echo msg="|   |-- optionals           # optional Packages (*.tar | *.tar.gz)" />

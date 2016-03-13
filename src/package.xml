@@ -5,7 +5,7 @@
         <packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
         <packagedescription><![CDATA[BBCode for Wowhead.com, Thottbot.com and Hearthhead.com tooltips]]></packagedescription>
         <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com, Thottbot.com und Hearthhead.com]]></packagedescription>
-        <version>2.0.3</version>
+        <version>2.0.4</version>
         <date>2016-03-13</date>
     </packageinformation>
 
