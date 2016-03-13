@@ -6,7 +6,7 @@
             <templatename>headIncludeJavaScript</templatename>
             <eventname>javascriptInclude</eventname>
             <templatecode><![CDATA[
-<script type="text/javascript" src="https://static.wowhead.com/widgets/power.js"></script>
+<script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script>
 <script>
 var wowhead_tooltips = {
     "colorlinks": true,
