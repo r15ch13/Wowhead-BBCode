@@ -1,9 +1,7 @@
-Wowhead BBCode
-=========================
-* BBCode to show item- and spelldata from Wowhead.com. Only for [WCF](http://www.woltlab.com/de/) and [WBB](http://www.woltlab.com/de/).
+# Wowhead BBCode
+BBCode to show item- and spelldata from Wowhead.com. Only for [WCF](http://www.woltlab.com/de/) and [WBB](http://www.woltlab.com/de/).
 
-Usage
-------------------
+## Usage
 Use my [Buildscript](https://github.com/r15ch13/WCF-WBB-Package-Builder) to generate the installable package.
 
 Copy the link to an item of Wowhead.com and add it to your forum to make the tooltip show up.
@@ -28,6 +26,11 @@ Example:
 
 It seams there is a bug in Wowheads power.js. If you add an item with gems/enchantments or whatsoever the script breaks and only items before the broken item will be displayed correctly. Avoid using gems/enchantments etc. until Wowhead fixes this problem.
 
-License
--------
+## Build package
+```
+> composer install
+> ./vendor/bin/phing build
+```
+
+## License
 [The MIT License (MIT)](http://r15ch13.mit-license.org/)
