@@ -7,6 +7,7 @@
         <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com, Thottbot.com und Hearthhead.com]]></packagedescription>
         <version>2.1.0</version>
         <date>2017-02-10</date>
+        <license><![CDATA[[The MIT License (MIT) <http://r15ch13.mit-license.org/>]]></license>
     </packageinformation>
 
     <authorinformation>
@@ -19,7 +20,7 @@
     </requiredpackages>
 
     <excludedpackages>
-        <excludedpackage version="*">de.ihl-gilneas.wcf.wildstar.bbcode</excludedpackage>
+        <excludedpackage version="*">de.ihl-gilneas.wcf.wowhead.bbcode</excludedpackage>
         <excludedpackage version="3.1.0 Alpha 1">com.woltlab.wcf</excludedpackage>
     </excludedpackages>
 
