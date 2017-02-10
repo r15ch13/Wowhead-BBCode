@@ -1,22 +1,21 @@
 [de]
-[b]Wowhead Tooltip BBCode[/b]
-
-[list][*]BBCode für Tooltips von Wowhead.com, Thottbot.com und Hearthhead.com[/list]
-
 [b]Verwendung[/b]
 
-Kopiere einen Link von Wowhead.com, Thottbot.com oder Hearthhead.com und füge ihn zu deinem Forum post hinzu damit der Tooltip erscheint.
+Kopiere einen Item/Zauberspruch/Erfolg/... Link in deinen Text damit der Tooltip erscheint.
 
-Auf Wowhead.com gibt es noch [url=http://www.wowhead.com/tooltips#related-advanced-usage]erweiterte Parameter[/url] um die Anzeige des Gegenstands zu verändern.
+Mit den [url=http://www.wowhead.com/tooltips#related-advanced-usage]erweiterte Parametern[/url] lässt sich die Anzeige verändern.
 
-Der Tooltip passt sich von selbst an die Sprache des jeweiligen Links an:
+Funktioniert mit allen von Wowhead unterstützen Sprachen:
 
     http://www.wowhead.com/item=28288 = englischer Tooltip
     http://de.wowhead.com/item=28288 = deutscher Tooltip
     http://fr.wowhead.com/item=28288 = französischer tooltip
 
 Beispiele:
-
+[code]
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent[/wow]
+    [wow=bonus=450&lvl=52&spec=263]http://www.wowhead.com/item=112920[/wow]
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent&bonus=450&lvl=53&spec=263[/wow]
     [wow]http://www.wowhead.com/item=28288[/wow]
     [wow]http://wod.wowhead.com/spell=49998[/wow]
     [wow=gems=23121&ench=2647&pcs=25695:25696:25697]http://www.wowhead.com/item=25697[/wow]
@@ -24,26 +23,29 @@ Beispiele:
     [wow=upgd=4]http://de.wowhead.com/item=105547[/wow]
     [wow]http://thottbot.com/item=25697[/wow]
     [wow]http://www.hearthhead.com/card=546/shield-slam[/wow]
+[/code]
+[b]Tooltip Einstellungen ändern[/b]
+Erstelle eine Kopie von [i]__wowheadBBCodeInclude.tpl[i] und ändere die Werte nach belieben.
+Vergiss nicht die Templategruppe in deinem Stil auszuwählen!
 [/de]
 [en]
-[b]Wowhead Tooltip BBCode[/b]
-
-[list][*]BBCode for Wowhead.com, Thottbot.com and Hearthhead.com tooltips[/list]
-
 [b]Usage[/b]
 
-Copy the link to an item of Wowhead.com, Thottbot.com or Hearthhead.com and add it into your forum post to make the tooltip show up.
+Copy a Wowhead.com item/spell/archievement/... link into your text to display the tooltip.
 
-Use the [url=http://www.wowhead.com/tooltips#related-advanced-usage]advanced parameters[/url] to adjust the presentation.
+Use [url=http://www.wowhead.com/tooltips#related-advanced-usage]advanced parameters[/url] to adjust the presentation.
 
-The tooltip adapts to the language of the copied links:
+The tooltip works with all languages supported by Wowhead:
 
     http://www.wowhead.com/item=28288 = Displays an english tooltip
     http://de.wowhead.com/item=28288 = Displays an german tooltip
     http://fr.wowhead.com/item=28288 = Displays an french tooltip
 
 Example:
-
+[code]
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent[/wow]
+    [wow=bonus=450&lvl=52&spec=263]http://www.wowhead.com/item=112920[/wow]
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent&bonus=450&lvl=53&spec=263[/wow]
     [wow]http://www.wowhead.com/item=28288[/wow]
     [wow]http://wod.wowhead.com/spell=49998[/wow]
     [wow=gems=23121&ench=2647&pcs=25695:25696:25697]http://www.wowhead.com/item=25697[/wow]
@@ -51,4 +53,8 @@ Example:
     [wow=upgd=4]http://de.wowhead.com/item=105547[/wow]
     [wow]http://thottbot.com/item=25697[/wow]
     [wow]http://www.hearthhead.com/card=546/shield-slam[/wow]
+[/code]
+[b]Change tooltip settings[/b]
+Create a copy of [i]__wowheadBBCodeInclude.tpl[i] and change the values as you like.
+Don't forget to select the template group in your style!
 [/en]

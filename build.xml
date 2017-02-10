@@ -125,9 +125,9 @@
 			<equals arg1="${file.exists}" arg2="1" />
 			<then>
 				<echo msg="Package with version ${package.version} already exists!" />
-				<input propertyname="package.override" validargs="yes,no" defaultvalue="no">Do you want to override it? </input>
+				<input propertyname="package.override" validargs="y,n" defaultvalue="n">Do you want to override it? </input>
 				<if>
-					<equals arg1="${package.override}" arg2="yes" />
+					<equals arg1="${package.override}" arg2="y" />
 					<then>
 						<delete file="${build.dir}/${package.name}_v${package.version}.tar.gz" />
 						<delete file="${build.dir}/${package.name}_v${package.version}.tar" />

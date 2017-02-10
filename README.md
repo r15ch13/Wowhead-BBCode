@@ -1,20 +1,24 @@
 # Wowhead BBCode
-BBCode to show item- and spelldata from Wowhead.com. Only for [WCF](http://www.woltlab.com/de/) and [WBB](http://www.woltlab.com/de/).
+BBCode to show item- and spelldata from Wowhead.com. Only for [WCF](http://www.woltlab.com/) and [WBB](http://www.woltlab.com/).
 
 ## Usage
 Use my [Buildscript](https://github.com/r15ch13/WCF-WBB-Package-Builder) to generate the installable package.
 
-Copy the link to an item of Wowhead.com and add it to your forum to make the tooltip show up.
+Copy a Wowhead.com item/spell/archievement/... link into your text to display the tooltip.
 
-Use the [advanced parameters](http://www.wowhead.com/tooltips#related-advanced-usage) to adjust the presentation.
+Use [advanced parameters](http://www.wowhead.com/tooltips#related-advanced-usage) to adjust the presentation.
 
-The tooltip adapts to the language of the copied links:
+The tooltip works with all languages supported by Wowhead:
 
     http://www.wowhead.com/item=28288 = Displays an english tooltip
     http://de.wowhead.com/item=28288 = Displays an german tooltip
     http://fr.wowhead.com/item=28288 = Displays an french tooltip
 
 Example:
+
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent[/wow]
+    [wow=bonus=450&lvl=52&spec=263]http://www.wowhead.com/item=112920[/wow]
+    [wow]http://www.wowhead.com/item=112920/korvens-crimson-crescent&bonus=450&lvl=53&spec=263[/wow]
 
     [wow]http://www.wowhead.com/item=28288[/wow]
     [wow]http://wod.wowhead.com/spell=49998[/wow]
@@ -24,7 +28,9 @@ Example:
     [wow]http://thottbot.com/item=25697[/wow]
     [wow]http://www.hearthhead.com/card=546/shield-slam[/wow]
 
-It seams there is a bug in Wowheads power.js. If you add an item with gems/enchantments or whatsoever the script breaks and only items before the broken item will be displayed correctly. Avoid using gems/enchantments etc. until Wowhead fixes this problem.
+## Change tooltip settings
+Create a copy of the `__wowheadBBCodeInclude.tpl` template and change the values as you like.
+Don't forget to select the template group in your style!
 
 ## Build package
 ```
