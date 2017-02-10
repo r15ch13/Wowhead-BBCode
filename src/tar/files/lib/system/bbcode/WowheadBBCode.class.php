@@ -67,6 +67,6 @@ class WowheadBBCode extends AbstractBBCode
 
     WCF::getTPL()->assign($templateVariables);
 
-    return WCF::getTPL()->fetch('wowheadBBCode');
+    return WCF::getTPL()->fetch('__wowheadBBCode');
   }
 }
