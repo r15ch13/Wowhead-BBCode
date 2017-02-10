@@ -39,4 +39,4 @@ Don't forget to select the template group in your style!
 ```
 
 ## License
-[The MIT License (MIT)](http://r15ch13.mit-license.org/)
+[The MIT License (MIT)](https://r15ch13.mit-license.org/)
