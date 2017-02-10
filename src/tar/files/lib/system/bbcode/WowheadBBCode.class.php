@@ -1,7 +1,8 @@
 <?php
 namespace wcf\system\bbcode;
-use wcf\system\WCF;
+
 use wcf\system\bbcode\AbstractBBCode;
+use wcf\system\WCF;
 use wcf\util\StringUtil;
 
 /**
@@ -13,39 +14,59 @@ use wcf\util\StringUtil;
  */
 class WowheadBBCode extends AbstractBBCode
 {
-    /**
-     * @see wcf\system\bbcode\IBBCode::getParsedTag()
-     */
-    public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser)
-    {
-        $templateVariables = array(
-            'url' => $content,
-            'related' => '',
-            'language' => 'www',
-            'type' => '',
-            'id' => 0,
-        );
-
-        if(preg_match('/^https?:\/\/(.+?)?\.?(?:wowhead|thottbot|hearthhead)\.com(?:\:\d+)?\/\??(achievement|adventure|boss|building|card|cardback|champion|currency|deck|event|follower|garrisonability|guide|hearthstone\/card|hsachievement|item|itemset|mechanic|mission|npc|object|outfit|petability|quest|resource|ship|spell|statistic|threat|transmog-set|zone)=([0-9]+)(?:.*)$/', $content, $matches))
-        {
-            if(count($matches) >= 4)
-            {
-                $templateVariables['url'] = $matches[0];
-                $templateVariables['language'] = $matches[1];
-                $templateVariables['type'] = $matches[2];
-                $templateVariables['id'] = $matches[3];
-            }
-        }
-
-        // Related advanced usage
-        // @see http://www.wowhead.com/tooltips#related-advanced-usage
-        if(isset($openingTag['attributes'][0]))
-        {
-            $templateVariables['related'] = trim($openingTag['attributes'][0]);
-        }
-
-        WCF::getTPL()->assign($templateVariables);
-
-        return WCF::getTPL()->fetch('wowheadBBCode');
+  /**
+   * @see wcf\system\bbcode\IBBCode::getParsedTag()
+   */
+  public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser)
+  {
+    if (!isset($openingTag['attributes'][0])) {
+      return '';
+    } else if ($parser->getOutputType() == 'text/simplified-html') {
+      return $openingTag['attributes'][0];
     }
+
+    $url = StringUtil::trim($openingTag['attributes'][0]);
+    // power.js no longer matches thottbot.com urls
+    $url = str_replace('thottbot.com', 'wowhead.com', $url);
+
+    $templateVariables = array(
+      'id' => 0,
+      'url' => $url,
+      'rel' => '',
+      'slug' => '',
+      'type' => '',
+      'lang' => 'www',
+      'content' => '',
+    );
+
+    // returns named capture groups lang, type, id, slug and rel
+    if (preg_match('/^(?:https?:)?\/\/(?<lang>.+?)?\.?(?:wowhead)\.com(?:\:\d+)?\/\??(?<type>[\w-]+)=(?<id>[0-9\.-]+)\/?(?<slug>[\w\d\-]+|)?&?(?<rel>[\w\d\-=:&]+|)?$/', $url, $matches)) {
+      $templateVariables = array_merge($templateVariables, $matches);
+
+      // show "<slug>" or "<type> #<id>" as content
+      $templateVariables['content'] = StringUtil::wordsToUpperCase(str_replace('-', ' ', $matches['slug']));
+      if (empty($matches['slug'])) {
+        $templateVariables['content'] = StringUtil::wordsToUpperCase($matches['type']) . ' #' . $matches['id'];
+      }
+    } else {
+      return $openingTag['attributes'][0];
+    }
+
+    // strip numeric keys
+    foreach ($templateVariables as $key => $value) {
+      if (is_int($key)) {
+        unset($templateVariables[$key]);
+      }
+    }
+
+    // related advanced usage
+    // @see http://www.wowhead.com/tooltips#related-advanced-usage
+    if (isset($openingTag['attributes'][1])) {
+      $templateVariables['rel'] = trim($openingTag['attributes'][1]);
+    }
+
+    WCF::getTPL()->assign($templateVariables);
+
+    return WCF::getTPL()->fetch('wowheadBBCode');
+  }
 }

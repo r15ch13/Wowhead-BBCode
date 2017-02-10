@@ -1,1 +1,1 @@
-<span class="WowheadTooltip"><a href="{$url}" {if $related}rel="{$related}" {/if}{if EXTERNAL_LINK_TARGET_BLANK}target="_blank" {/if}title="{if $type}{$type} #{$id}{else}{$url}{/if}">{if $type}{$type} #{$id}{else}{$url}{/if}</a></span>
+<span class="WowheadTooltip"><a href="{$url}"{if $rel} rel="{$rel}"{/if}{if EXTERNAL_LINK_TARGET_BLANK} target="_blank"{/if}>{$content}</a></span>
