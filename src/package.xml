@@ -27,7 +27,7 @@
         <instruction type="file">tar/files.tar</instruction>
         <instruction type="template">tar/templates.tar</instruction>
         <instruction type="bbcode">xml/bbcode.xml</instruction>
-        <instruction type="language">languages/*.xml</instruction>
+        <instruction type="language" />
         <instruction type="templateListener">xml/templateListener.xml</instruction>
     </instructions>
 
@@ -35,7 +35,7 @@
         <instruction type="file">tar/files.tar</instruction>
         <instruction type="template">tar/templates.tar</instruction>
         <instruction type="bbcode">xml/bbcode.xml</instruction>
-        <instruction type="language">languages/*.xml</instruction>
+        <instruction type="language" />
         <instruction type="templateListener">xml/templateListener.xml</instruction>
     </instructions>
 </package>
