@@ -3,7 +3,7 @@
     <import>
         <bbcode name="wow">
             <classname>wcf\system\bbcode\WowheadBBCode</classname>
-            <wysiwygicon>WowheadBBCode.png</wysiwygicon>
+            <wysiwygicon>fs-wowhead.png</wysiwygicon>
             <buttonlabel>wcf.bbcode.wowhead.title</buttonlabel>
             <allowedchildren>none</allowedchildren>
             <sourcecode>1</sourcecode>
