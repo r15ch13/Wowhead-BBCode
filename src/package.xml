@@ -5,8 +5,8 @@
         <packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
         <packagedescription><![CDATA[BBCode for Wowhead.com tooltips]]></packagedescription>
         <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com]]></packagedescription>
-        <version>2.1.0</version>
-        <date>2017-02-10</date>
+        <version>2.1.1</version>
+        <date>2017-02-11</date>
         <license><![CDATA[[The MIT License (MIT) <http://r15ch13.mit-license.org/>]]></license>
     </packageinformation>
 
@@ -16,12 +16,12 @@
     </authorinformation>
 
     <requiredpackages>
-        <requiredpackage minversion="2.1.0 Alpha 1">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="3.0.0">com.woltlab.wcf</requiredpackage>
     </requiredpackages>
 
     <excludedpackages>
-        <excludedpackage version="*">de.ihl-gilneas.wcf.wowhead.bbcode</excludedpackage>
         <excludedpackage version="3.1.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="*">de.ihl-gilneas.wcf.wowhead.bbcode</excludedpackage>
     </excludedpackages>
 
     <instructions type="install">
