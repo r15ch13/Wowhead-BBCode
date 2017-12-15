@@ -1,0 +1,26 @@
+shallow_clone: true
+clone_depth: 1
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+cache:
+  - vendor -> **\composer.json
+  - '%USERPROFILE%\scoop\cache'
+init:
+  - ps: iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+  - ps: $ErrorActionPreference = 'Continue'
+  - ps: scoop update -q
+  - ps: appveyor-retry scoop bucket add versions
+install:
+  - ps: scoop install php71 composer openssl
+  - ps: $custom = "$env:USERPROFILE\scoop\persist\php71\cli\conf.d\custom.ini"
+  - ps: echo "date.timezone='Europe/Berlin'" | Out-File -Encoding ASCII $custom
+  - ps: echo "extension_dir=ext" | Out-File -Encoding ASCII $custom
+  - ps: echo "extension=php_openssl.dll" | Out-File -Encoding ASCII -Append $custom
+  - ps: echo "extension=php_mbstring.dll" | Out-File -Encoding ASCII -Append $custom
+  - ps: echo "extension=php_fileinfo.dll" | Out-File -Encoding ASCII -Append $custom
+  - ps: echo $env:CI
+  - appveyor-retry composer install --no-progress --no-interaction
+build_script:
+  - ./vendor/bin/phing build
+artifacts:
+  - path: 'dist\*.tar.gz'
