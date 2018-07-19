@@ -2,7 +2,7 @@
 <!--
 /**
  * @author Richard Kuhnt
- * @license MIT License (http://r15ch13.mit-license.org/)
+ * @license MIT License (https://r15ch13.mit-license.org/)
  */
 -->
 <project name="WCF/WBB Package Builder" default="help" basedir=".">

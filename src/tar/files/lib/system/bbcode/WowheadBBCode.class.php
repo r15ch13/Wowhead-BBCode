@@ -8,7 +8,7 @@ use wcf\util\StringUtil;
 /**
  * @package de.r15ch13.wcf.bbcode.wowhead
  * @author Richard Kuhnt
- * @license MIT License (http://r15ch13.mit-license.org/)
+ * @license MIT License (https://r15ch13.mit-license.org/)
  * @category WCF
  * @see http://www.wowhead.com/tooltips
  */
