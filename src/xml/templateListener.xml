@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <import>
-        <templatelistener name="wowheadBBCodeInit">
-            <environment>user</environment>
-            <templatename>headIncludeJavaScript</templatename>
-            <eventname>javascriptInclude</eventname>
-            <templatecode><![CDATA[{include file="__wowheadBBCodeInclude"}]]></templatecode>
-        </templatelistener>
-        <templatelistener name="wowheadBBCodeRequirePaths">
-            <environment>user</environment>
-            <templatename>headIncludeJavaScript</templatename>
-            <eventname>requirePaths</eventname>
-            <templatecode><![CDATA['Wowhead': 'https://wow.zamimg.com/widgets',]]></templatecode>
-        </templatelistener>
-    </import>
+	<import>
+		<templatelistener name="wowheadBBCodeInit">
+			<environment>user</environment>
+			<templatename>headIncludeJavaScript</templatename>
+			<eventname>javascriptInclude</eventname>
+			<templatecode><![CDATA[{include file="__wowheadBBCodeInclude"}]]></templatecode>
+		</templatelistener>
+		<templatelistener name="wowheadBBCodeRequirePaths">
+			<environment>user</environment>
+			<templatename>headIncludeJavaScript</templatename>
+			<eventname>requirePaths</eventname>
+			<templatecode><![CDATA['Wowhead': 'https://wow.zamimg.com/widgets',]]></templatecode>
+		</templatelistener>
+	</import>
 </data>

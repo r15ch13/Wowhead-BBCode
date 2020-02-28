@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/bbcode.xsd">
-    <import>
-        <bbcode name="wow">
-            <classname>wcf\system\bbcode\WowheadBBCode</classname>
-            <wysiwygicon>fs-wowhead.png</wysiwygicon>
-            <buttonlabel>wcf.bbcode.wowhead.title</buttonlabel>
-            <allowedchildren>none</allowedchildren>
-            <sourcecode>1</sourcecode>
-            <attributes>
-                <attribute name="0">
-                </attribute>
-            </attributes>
-        </bbcode>
-    </import>
+	<import>
+		<bbcode name="wow">
+			<classname>wcf\system\bbcode\WowheadBBCode</classname>
+			<wysiwygicon>fs-wowhead.png</wysiwygicon>
+			<buttonlabel>wcf.bbcode.wowhead.title</buttonlabel>
+			<allowedchildren>none</allowedchildren>
+			<sourcecode>1</sourcecode>
+			<attributes>
+				<attribute name="0">
+				</attribute>
+			</attributes>
+		</bbcode>
+	</import>
 </data>

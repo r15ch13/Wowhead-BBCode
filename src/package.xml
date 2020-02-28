@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <package name="de.r15ch13.wcf.bbcode.wowhead" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
+	<package name="de.r15ch13.wcf.bbcode.wowhead" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/package.xsd">
 
-    <packageinformation>
-        <packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
-        <packagedescription><![CDATA[BBCode for Wowhead.com tooltips]]></packagedescription>
-        <packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com]]></packagedescription>
-        <version>2.1.3</version>
-        <date>2020-02-28</date>
-        <license><![CDATA[[The MIT License (MIT) <https://r15ch13.mit-license.org/>]]></license>
-    </packageinformation>
+	<packageinformation>
+		<packagename><![CDATA[Wowhead Tooltip BBCode]]></packagename>
+		<packagedescription><![CDATA[BBCode for Wowhead.com tooltips]]></packagedescription>
+		<packagedescription language="de"><![CDATA[BBCode für Tooltips von Wowhead.com]]></packagedescription>
+		<version>2.1.3</version>
+		<date>2020-02-28</date>
+		<license><![CDATA[[The MIT License (MIT) <https://r15ch13.mit-license.org/>]]></license>
+	</packageinformation>
 
-    <authorinformation>
-        <author><![CDATA[r15ch13]]></author>
-        <authorurl><![CDATA[https://github.com/r15ch13/Wowhead-BBCode]]></authorurl>
-    </authorinformation>
+	<authorinformation>
+		<author><![CDATA[r15ch13]]></author>
+		<authorurl><![CDATA[https://github.com/r15ch13/Wowhead-BBCode]]></authorurl>
+	</authorinformation>
 
-    <requiredpackages>
-        <requiredpackage minversion="3.0.0"><![CDATA[com.woltlab.wcf]]></requiredpackage>
-    </requiredpackages>
+	<requiredpackages>
+		<requiredpackage minversion="3.0.0"><![CDATA[com.woltlab.wcf]]></requiredpackage>
+	</requiredpackages>
 
-    <excludedpackages>
-        <excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
-    </excludedpackages>
+	<excludedpackages>
+		<excludedpackage version="6.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+	</excludedpackages>
 
-    <instructions type="install">
-        <instruction type="file">tar/files.tar</instruction>
-        <instruction type="template">tar/templates.tar</instruction>
-        <instruction type="bbcode">xml/bbcode.xml</instruction>
-        <instruction type="language" />
-        <instruction type="templateListener">xml/templateListener.xml</instruction>
-    </instructions>
+	<instructions type="install">
+		<instruction type="file">tar/files.tar</instruction>
+		<instruction type="template">tar/templates.tar</instruction>
+		<instruction type="bbcode">xml/bbcode.xml</instruction>
+		<instruction type="language" />
+		<instruction type="templateListener">xml/templateListener.xml</instruction>
+	</instructions>
 
-    <instructions type="update" fromversion="2.*">
-        <instruction type="file">tar/files.tar</instruction>
-        <instruction type="template">tar/templates.tar</instruction>
-        <instruction type="bbcode">xml/bbcode.xml</instruction>
-        <instruction type="language" />
-        <instruction type="templateListener">xml/templateListener.xml</instruction>
-    </instructions>
+	<instructions type="update" fromversion="2.*">
+		<instruction type="file">tar/files.tar</instruction>
+		<instruction type="template">tar/templates.tar</instruction>
+		<instruction type="bbcode">xml/bbcode.xml</instruction>
+		<instruction type="language" />
+		<instruction type="templateListener">xml/templateListener.xml</instruction>
+	</instructions>
 </package>
