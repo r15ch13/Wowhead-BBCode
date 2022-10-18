@@ -11,8 +11,8 @@ init:
   - ps: scoop update -q
   - ps: appveyor-retry scoop bucket add versions
 install:
-  - ps: scoop install php71 composer openssl
-  - ps: $custom = "$env:USERPROFILE\scoop\persist\php71\cli\conf.d\custom.ini"
+  - ps: scoop install php composer openssl
+  - ps: $custom = "$env:USERPROFILE\scoop\persist\php\cli\conf.d\custom.ini"
   - ps: echo "date.timezone='Europe/Berlin'" | Out-File -Encoding ASCII $custom
   - ps: echo "extension_dir=ext" | Out-File -Encoding ASCII $custom
   - ps: echo "extension=php_openssl.dll" | Out-File -Encoding ASCII -Append $custom

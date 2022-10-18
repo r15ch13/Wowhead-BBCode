@@ -1,6 +1,6 @@
 {
     "require-dev": {
-        "phing/phing": "^2.16",
+        "phing/phing": "2.*",
         "pear/archive_tar": "^1.4"
     },
     "scripts": {
