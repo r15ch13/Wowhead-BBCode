@@ -11,7 +11,7 @@
 			<environment>user</environment>
 			<templatename>headIncludeJavaScript</templatename>
 			<eventname>requirePaths</eventname>
-			<templatecode><![CDATA['Wowhead': 'https://wow.zamimg.com/widgets',]]></templatecode>
+			<templatecode><![CDATA['Wowhead': 'https://wow.zamimg.com/js',]]></templatecode>
 		</templatelistener>
 	</import>
 </data>
